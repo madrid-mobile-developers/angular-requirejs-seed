@@ -7,12 +7,10 @@
     "name": "ondaplana"
   },
   "scripts": {
-    "start": "node ./server/start.js"
+    "start": "node ./js/start.js"
   },
   "dependencies": {
     "express": "3.x",
-    "q": "*",
-    "open": ">= 0.0.2",
-    "mongodb": ">= 0.9.6-7"
+    "open": ">= 0.0.2"
   }
 }

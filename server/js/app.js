@@ -1,7 +1,6 @@
 var express = require('express');
 var fs = require('fs');
-//var open = require('open');
-var routerDB = require('./routes/routesDb');
+var open = require('open');
 
 exports.start = function(PORT, STATIC_DIR) {
     var app = express();
@@ -29,12 +28,9 @@ exports.start = function(PORT, STATIC_DIR) {
         app.use(express.errorHandler());
     }
 
-    // route requests to database services
-    routerDB(app);
-
     // start the server and open a browser
     app.listen(PORT, function() {
-      //open('http://localhost:' + PORT + '/');
+      open('http://localhost:' + PORT + '/');
       console.log('Go to http://localhost:' + PORT + '/');
     });
 };
